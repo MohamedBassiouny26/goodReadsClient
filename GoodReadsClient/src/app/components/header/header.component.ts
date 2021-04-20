@@ -1,5 +1,6 @@
 import { Component, OnInit,HostListener } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -29,7 +30,7 @@ export class HeaderComponent implements OnInit {
     pullDrag: true,
     dots: true,
     navSpeed: 700,
-    navText: ['fgdfdgdggddg', 'adadadadadad'],
+    navText: ['Prev', 'Next'],
     responsive: {
       0: {
         items: 2
@@ -41,7 +42,7 @@ export class HeaderComponent implements OnInit {
         items: 6
       },
       940: {
-        items: 8
+        items: 6
       }
     },
     nav: true

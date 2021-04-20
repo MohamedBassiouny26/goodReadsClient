@@ -1,137 +1,4 @@
-/* .background-photo{
-  width:100%;
-  background-color: aqua;
-  height: 100%;
-  min-height: 380px;
-  box-sizing: border-box;
-  background-image: url("https://jerryjenkins.com/wp-content/uploads/2015/06/Library-Picture-Crop-1024x512.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
 
-.navbar-custom {
-    background-color: #691919c4;
-    overflow: hidden;
-}
-
-.dummy{
-    background-color: aqua;
-}
-
-.nav-link {
-    padding:10px
-  }
-  
-  .nav-link:hover {
-    background-color: #ddd;
-    color: black;
-  }
-
-  .navbar-inverse{
-    background-color:black
-  }
-
-  .nav-item{
-     float: right;
-  }
-
-  a.nav-link{
-    margin-right: 43%;
-    font-size: 19px;
-    color: wheat;
-  }
-
-  .navbar-nav{
-      margin-left: -40%;
-  }
-
-  .nav-container{
-    position: absolute;
-    margin: 20px;
-    width: auto;
-  }
-
-  .container {
-    position: absolute;
-    margin: 20px;
-    width: auto;
-  }
-  
-  The navbar
-  .topnav {
-    overflow: hidden;
-    background-color: #333;
-  }
-  
-  Navbar links
-  .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  } */
-
-
-  /* .bg-img { */
-    /* The image used */
-    /* background-image: url("https://jerryjenkins.com/wp-content/uploads/2015/06/Library-Picture-Crop-1024x512.jpg");
-  
-    min-height: 380px; */
-  
-    /* Center and scale the image nicely */
-    /* background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
-  
-    /* Needed to position the navbar */
-    /* position: relative;
-  }
-   */
-  /* Position the navbar container inside the image */
-  /* .container {
-    position: absolute;
-    margin: 20px;
-    width: auto;
-  } */
-  
-  /* The navbar */
-  /* .topnav {
-    overflow: hidden;
-    background-color: #333;
-  } */
-  
-  /* Navbar links */
-  /* .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-
-  .abs{
-    position: absolute;
-    width: 100%;
-    padding:10%;
-    background-color:black;
-    margin-top:5%;
-    overflow: hidden;
-  } */
 
   .jumbotron{
     background-image:url('https://lifeatrestoration.com/wp-content/uploads/2016/09/group-of-people-reading-the-bible-holding-hands.jpg') ;
@@ -143,12 +10,16 @@
   }
 
   .jumbotron::before{
-    background-color: rgba(0, 0, 0, 0.37);
+    background:#151414;
     content: '';
     display: block;
     position: absolute;
-    width: 100%;
-    z-index: 5;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0.5;
+    height: inherit;
   }
 
   .jumbotron h1{
@@ -205,16 +76,45 @@
   }
 
   .carousel-container{
-    width: 100%;
+    width: 90%;
     height: auto;
     background-color: black;
     padding: 1%;
     padding-top: 4%;
     align-items: center;
-    /* margin: 10%; */
     box-sizing: border-box;
+    margin-left: 5%;
+    border-radius: 10%;
 }
 
 img{
     height: 100%;
+}
+
+.section-title{
+  color: #6c0808;
+  font-family: cursive;
+  padding-left: 4%;
+}
+
+.carousel-container-books{
+  width: 90%;
+  height: auto;
+  background-color: #11182db5;
+  padding: 1%;
+  padding-top: 4%;
+  align-items: center;
+  box-sizing: border-box;
+  margin-left: 5%;
+  border-radius: 10%;
+}
+
+.words{
+  padding:2%
+}
+
+.spaces-b-curosel{
+  font-size:larger;
+    font-weight: 4000;
+    margin-bottom: 3%;
 }
