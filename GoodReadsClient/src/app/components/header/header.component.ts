@@ -29,7 +29,7 @@ export class HeaderComponent implements OnInit {
     touchDrag: true,
     pullDrag: true,
     dots: true,
-    navSpeed: 700,
+    navSpeed: 300,
     navText: ['Prev', 'Next'],
     responsive: {
       0: {

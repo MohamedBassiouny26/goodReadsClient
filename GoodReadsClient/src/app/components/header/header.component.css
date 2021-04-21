@@ -114,7 +114,7 @@
 }
 
 img{
-    height: 100%;
+    /* height: 100%; */
 }
 
 .section-title{
@@ -143,4 +143,28 @@ img{
   font-size:larger;
     font-weight: 4000;
     margin-bottom: 3%;
+}
+
+.rounded-circle{
+  border-radius: 50% !important;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+.img-fluid{
+  height: 120px;
+  width: 128px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.team-player h4,h1{
+  color:maroon;
+  font-family: cursive;
+  font-weight:bolder
+}
+
+.section-team{
+  margin-bottom: 3%;
 }
