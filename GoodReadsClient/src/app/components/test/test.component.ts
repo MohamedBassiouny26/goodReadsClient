@@ -1,42 +1,27 @@
-import { Component, OnInit ,ViewChild } from '@angular/core';
-import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
-import { OwlOptions } from 'ngx-owl-carousel-o';
+import { Component, OnInit,HostListener } from '@angular/core';
+
 @Component({
   selector: 'app-test',
   templateUrl: './test.component.html',
   styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
+    constructor() {
+        
+    }
 
-  
-  constructor() { }
+    ngOnInit() {
+        
+    }
 
-  ngOnInit(): void {
-  }
+    onWindowScroll(e) {
+        let element = document.querySelector('.navbar');
+        if (window.pageYOffset > element.clientHeight) {
+            element.classList.add('navbar-inverse');
 
-  customOptions: OwlOptions = {
-    loop: true,
-    mouseDrag: true,
-    touchDrag: true,
-    pullDrag: true,
-    dots: true,
-    navSpeed: 700,
-    navText: ['fgdfdgdggddg', 'adadadadadad'],
-    responsive: {
-      0: {
-        items: 2
-      },
-      400: {
-        items: 4
-      },
-      740: {
-        items: 6
-      },
-      940: {
-        items: 8
+        } else {
+          element.classList.remove('navbar-inverse');
+        }
       }
-    },
-    nav: true
-  }
 
 }
