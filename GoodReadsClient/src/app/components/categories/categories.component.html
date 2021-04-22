@@ -1,0 +1,29 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+
+
+<div class="back">
+    <div class="d-flex align-items-center justify-content-center">
+        <h2 class="shelf">Categories</h2>
+    </div>
+    <hr/>
+    <div class="row row-cols-1 row-cols-md-4 row-cols-sm-2 g-4 catBack" *ngIf="categories.length > 0 ;else emptyList">
+        <app-category class="card-columns " *ngFor="let category of categories | paginate:{
+                        id:'listBooks',
+                        itemsPerPage:12,
+                        currentPage:page,
+                        totalItems:totalRecords
+                    }" [categoryInfo]="category"></app-category>
+    </div>
+    <div class="pagination justify-content-center fixed-bottom  ">
+        <pagination-controls id="listBooks" class="my-pagination" (pageChange)="page=$event"></pagination-controls>
+    </div>
+
+</div>
+
+
+<ng-template #emptyList>
+    <!-- <p>No categories in the list -> <a routerLink="">navigate to home</a></p> -->
+    <p>No categories in the list -> <a>navigate to home</a></p>
+
+</ng-template>
