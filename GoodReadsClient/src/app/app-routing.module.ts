@@ -21,6 +21,7 @@ import { AdminPanelComponent } from './components/admin/admin-panel/admin-panel.
 // import { BookDetailsComponent } from './components/book-details/book-details.component';
 import { AuthGuard } from './auth.guard';
 import { HeaderComponent } from './components/header/header.component';
+import { AuthorsComponent } from './components/authors/authors.component';
 
 const routes: Routes = [
   // { path: '', component: HomeComponent },
@@ -55,7 +56,7 @@ const routes: Routes = [
       // { path: 'categories/:id/:id', component: BookDetailsComponent },
       { path: 'login', component: LoginComponent },
       { path: '', redirectTo: 'authors', pathMatch: 'full' },
-      // { path: 'authors', component: AuthorsComponent, canActivate: [AuthGuard] },
+      { path: 'authors', component: AuthorsComponent, canActivate: [AuthGuard] },
       // { path: 'authors/:id', component: AuthorDetailsComponent },
       // { path: 'authors/:id/:id', component: BookDetailsComponent },
 

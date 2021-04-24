@@ -1,6 +1,6 @@
 <section class="header">
   <!-- <img src="../../../assets/images/books-1281581_1920.jpg" class="img-fluid" alt="..."> -->
-  <div class="text-primary headerText">
+  <div class=" headerText">
     <h2>Explore Our Books</h2>
     <p>There's something for everybody</p>
   </div>
@@ -8,32 +8,32 @@
 <section class="container ">
   <hr>
   <div class="popular-books row d-flex  align-items-center">
-    <h3 class="text-primary ">Popular Books</h3>
-    <hr class="text-primary">
+    <h3 class="text ">Popular Books</h3>
+    <hr class="text">
     <a class="bookCover col-lg-2 col-sm-12 col-md-6" *ngFor="let book of books | slice:0:6;">
       <img src="{{book.cover}}" class="" alt="...">
       <div class="">
-        <h5 class="card-title">{{book.name}}</h5>
+        <h5 class="text">{{book.name}}</h5>
       </div>
     </a>
   </div>
   <div class="popular-books row d-flex  align-items-center">
-    <h3 class="text-primary ">Most Read Books</h3>
-    <hr class="text-primary">
+    <h3 class="text ">Most Read Books</h3>
+    <hr class="text">
     <a class="bookCover col-lg-2 col-sm-12 col-md-6" *ngFor="let book of books | slice:6:12;">
       <img src="{{book.cover}}" class="" alt="...">
       <div class="">
-        <h5 class="card-title">{{book.name}}</h5>
+        <h5 class="text">{{book.name}}</h5>
       </div>
     </a>
   </div>
   <div class="all-books row d-flex  align-items-center">
-    <h3 class="text-primary ">Books</h3>
-    <hr class="text-primary" />
+    <h3 class="text ">Books</h3>
+    <hr class="text" />
     <a class="bookCover col-lg-2 col-sm-12 col-md-6" *ngFor="let book of books">
       <img src="{{book.cover}}" class="" alt="...">
       <div class="">
-        <h5 class="card-title">{{book.name}}</h5>
+        <h5 class="text">{{book.name}}</h5>
       </div>
     </a>
   </div>
