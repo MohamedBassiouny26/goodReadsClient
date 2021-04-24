@@ -1,4 +1,4 @@
-import { Component, OnInit,HostListener } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-test',
@@ -6,22 +6,22 @@ import { Component, OnInit,HostListener } from '@angular/core';
   styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
-    constructor() {
-        
+  constructor() {
+
+  }
+
+  ngOnInit() {
+
+  }
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll(e) {
+    let element = document.querySelector('.navbar');
+    if (window.pageYOffset > element?.clientHeight) {
+      element.classList.add('navbar-inverse');
+
+    } else {
+      element.classList.remove('navbar-inverse');
     }
-
-    ngOnInit() {
-        
-    }
-
-    onWindowScroll(e) {
-        let element = document.querySelector('.navbar');
-        if (window.pageYOffset > element.clientHeight) {
-            element.classList.add('navbar-inverse');
-
-        } else {
-          element.classList.remove('navbar-inverse');
-        }
-      }
+  }
 
 }

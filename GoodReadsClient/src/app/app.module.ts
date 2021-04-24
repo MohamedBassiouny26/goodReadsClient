@@ -133,6 +133,9 @@ import { EditItemComponent } from './components/admin/category-panel/edit-catego
 import { AddItemComponent } from './components/admin/category-panel/add-category/add-categroy.component';
 import { RegisterComponent } from './components/register/register.component';
 import { UserComponent } from './components/user/user.component';
+import { CategoriesComponent } from './components/categories/categories.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { CategoryComponent } from './components/category/category.component';
 
 @NgModule({
   declarations: [
@@ -157,7 +160,9 @@ import { UserComponent } from './components/user/user.component';
     EditItemComponent,
     AddItemComponent,
     RegisterComponent,
-    UserComponent
+    UserComponent,
+    CategoriesComponent,
+    CategoryComponent
 
   ],
   imports: [
@@ -167,7 +172,8 @@ import { UserComponent } from './components/user/user.component';
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule
   ],
   providers: [NoopAnimationsModule],
   bootstrap: [AppComponent]
