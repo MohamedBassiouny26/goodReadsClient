@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/GoodReadsClient'),
+      dir: require('path').join(__dirname, './coverage/goodReadsAngular'),
       subdir: '.',
       reporters: [
         { type: 'html' },
