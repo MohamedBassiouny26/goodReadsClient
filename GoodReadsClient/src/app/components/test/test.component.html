@@ -1,0 +1,37 @@
+
+<nav class="navbar navbar-expand-lg fixed-top" (scroll)="onWindowScroll($event);">
+  <h1>GoodReads</h1>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+   aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+   <i class="fas fa-bars"></i>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item">
+        <a class="nav-link "  href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Books</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Categories</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="#" >Authors</a>
+      </li>
+      <div class="input-group input-group-sm mb-3 d-flex">
+        <input type="text" class="form-control search" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        <i class="fas fa-search"></i>
+      </div>
+      <div class="login d-flex mr-auto justify-content-around">
+        <li class="nav-item ">
+          <button type="button" class="btn btn-primary ">Login</button>
+        </li>
+        <li class="nav-item mr-auto">
+          <button type="button" class="btn btn-primary">Register</button>
+        </li>
+      </div>
+    </ul>
+  </div>
+</nav>
+
