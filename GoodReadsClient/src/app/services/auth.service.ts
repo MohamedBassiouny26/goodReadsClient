@@ -7,14 +7,14 @@ import { HttpClient } from '@angular/common/http';
 export class AuthService {
   private registerUrl = "http://localhost:8000/register ";
   private loginUrl = "http://localhost:8000/login ";
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
 
   registerUser(user: any) {
     return this.http.post<any>(this.registerUrl, user);
   }
 
-  loginUser(user:any) {
+  loginUser(user: any) {
     return this.http.post<any>(this.loginUrl, user)
   }
   getCategories() {
@@ -25,11 +25,11 @@ export class AuthService {
     return localStorage.getItem('token');
   }
 
-  getId(){
+  getId() {
     return localStorage.getItem('id')
   }
 
-  loggedIn(){
+  loggedIn() {
     return !!localStorage.getItem('token')
   }
 
