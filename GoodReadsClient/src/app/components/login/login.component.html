@@ -1,0 +1,35 @@
+
+<div class="login">
+<div class="cont">
+    
+    
+       
+          <h1 class="py-3">GoodReads</h1>
+          <h4>Sign into your Account</h4>
+          <form [formGroup]="loginForm" (ngSubmit)="loginClicked()">
+            <span>
+              <i></i>
+              <p></p>
+                <input formControlName='email'  type="email" placeholder="Email" class="t reg-fields"
+              >
+                </span>
+                <span class="error text-danger text-center" *ngIf="email?.invalid && email?.touched">***Invalid
+                  Email</span>
+                  <span>
+                   
+                    <p></p>
+                   
+                <input formControlName='password' class="t" type="password" placeholder="********" >
+                </span>
+            
+                <button type="submit" class="btn1 mt-1 mb-3" [disabled]="!loginForm.valid" >Login</button>
+            
+            <p class="text-danger text-center" *ngIf="forbidden"> Incorrect Email Or Password </p>
+          </form>
+          <h6>Don't have an account? <app-register></app-register>
+          </h6>
+        </div>
+  </div>
+
+
+        
