@@ -33,7 +33,7 @@ a {
 }
 .popular-books,
 .all-books {
-  background-color: #e4f5fa;
+  background-color: #1a1e21;
   padding: 5px;
   margin: auto;
   text-align: left;
@@ -60,4 +60,7 @@ hr {
   /* width: 660px; */
   /* border-radius: none; */
   /* width: auto; */
+}
+.text {
+  color: white;
 }
