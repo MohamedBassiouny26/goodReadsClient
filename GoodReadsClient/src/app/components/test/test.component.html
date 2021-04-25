@@ -8,29 +8,30 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <ul class="navbar-nav mx-auto">
       <li class="nav-item">
-        <a class="nav-link "  href="#">Home</a>
+        <a [routerLinkActiveOptions]='{exact:true}' routerLinkActive="active" routerLink="home" class="nav-link" data-abc="true" *ngIf="logoutIcon">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Books</a>
+        <a routerLinkActive="active" routerLink="books" class="nav-link"  data-abc="true">Books</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Categories</a>
+        <a routerLinkActive="active" routerLink="categories" class="nav-link"  data-abc="true">Categories</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link " href="#" >Authors</a>
+        <a routerLinkActive="active" routerLink="authors" class="nav-link"  data-abc="true">Authors</a>
       </li>
-      <div class="input-group input-group-sm mb-3 d-flex">
+      <div class="input-group input-group-sm mb-3 d-flex" *ngIf="logoutIcon">
         <input type="text" class="form-control search" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
         <i class="fas fa-search"></i>
       </div>
-      <div class="login d-flex mr-auto justify-content-around">
-        <li class="nav-item ">
-          <button type="button" class="btn btn-primary ">Login</button>
+      
+        <li class="nav-item login">
+          <button type="button" class="btn btn-primary "  (click)="goToLogin()" *ngIf=" ! logoutIcon">Login</button>
         </li>
-        <li class="nav-item mr-auto">
-          <button type="button" class="btn btn-primary">Register</button>
+        <li class='nav-item logout' *ngIf="logoutIcon">
+          <button (click)="logOut()"><i class="fas fa-sign-out-alt"></i></button>
+             
         </li>
-      </div>
+   
     </ul>
   </div>
 </nav>

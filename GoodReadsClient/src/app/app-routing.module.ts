@@ -23,6 +23,7 @@ import { AuthGuard } from './auth.guard';
 import { HeaderComponent } from './components/header/header.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { AuthorsComponent } from './components/authors/authors.component';
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
   // { path: '', component: HomeComponent },
@@ -41,6 +42,7 @@ const routes: Routes = [
     component: UserComponent,
     children: [
       { path: '', component: HeaderComponent },
+      { path:'home' , component:HomeComponent},
       // { path: 'user', component: UsersComponent },
       // { path: 'books', component: BooksComponent },
       { path: 'categories', component: CategoriesComponent },
