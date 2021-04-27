@@ -125,7 +125,7 @@ import { AddAuthorComponent } from './components/admin/author-panel/add-author/a
 import { AdminPanelComponent } from './components/admin/admin-panel/admin-panel.component';
 import { AdminHeaderComponent } from './components/admin/admin-header/admin-header.component';
 import { AuthorPanelComponent } from './components/admin/author-panel/author-panel.component';
-import { NgxPaginationModule } from 'ngx-pagination';
+// import { NgxPaginationModule } from 'ngx-pagination';
 import { CategoryPanelComponent } from './components/admin/category-panel/category-panel.component';
 import { BooksPanelComponent } from './components/admin/books-panel/books-panel.component';
 import { EditAuthorComponent } from './components/admin/author-panel/edit-author/edit-author.component';
@@ -166,7 +166,7 @@ import { AuthorComponent } from './components/author/author.component';
     RegisterComponent,
     UserComponent,
     CategoriesComponent,
-    CategoryComponent
+    CategoryComponent,
     AuthorsComponent,
     AuthorComponent
 

@@ -8,10 +8,13 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
-
+  
+   
   ngOnInit(): void {
+  
   }
+  
+
 
   customOptions: OwlOptions = {
     loop: true,
