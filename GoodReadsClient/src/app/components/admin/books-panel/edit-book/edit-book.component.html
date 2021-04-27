@@ -1,6 +1,5 @@
 <!-- Modal -->
 <div class="modal fade" id="editBookModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel"
-
   aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -32,7 +31,7 @@
           <div class="form-group">
             <label class="m-1" for="exampleInputEmail1">Category </label>
             <select class="form-select" aria-label="Default select example" formControlName='categoryId'>
-              <option [value]='updatedBook?.categoryId' selected>{{updatedBook?.categoryId.name}}</option>
+              <option [value]='updatedBook?.categoryId' selected>{{updatedBook?.categoryId?.name}}</option>
               <option *ngFor="let category of categories" [value]='category._id'>{{category.name}}
               </option>
             </select>

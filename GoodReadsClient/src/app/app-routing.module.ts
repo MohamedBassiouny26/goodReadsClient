@@ -23,6 +23,7 @@ import { AuthGuard } from './auth.guard';
 import { HeaderComponent } from './components/header/header.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { AuthorsComponent } from './components/authors/authors.component';
+import { BookDetailsComponent } from './components/book-details/book-details.component';
 
 const routes: Routes = [
   // { path: '', component: HomeComponent },
@@ -51,7 +52,7 @@ const routes: Routes = [
       // { path: '', component: HomeComponent },
       // { path: 'user', component: UsersComponent },
       { path: 'books', component: BooksComponent, canActivate: [AuthGuard] },
-      // { path: 'books/:id', component: BookDetailsComponent },
+      { path: 'books/:id', component: BookDetailsComponent },
       // { path: 'categories', component: CategoriesComponent, canActivate: [AuthGuard] },
       // { path: 'categories/:id', component: CategoryDetailsComponent },
       // { path: 'categories/:id/:id', component: BookDetailsComponent },
@@ -71,7 +72,9 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  imports: [CommonModule, RouterModule.forRoot(routes)],
+  imports: [CommonModule, RouterModule.forRoot(routes, {
+    onSameUrlNavigation: 'reload'
+  })],
   exports: [RouterModule],
 })
 export class AppRoutingModule { }

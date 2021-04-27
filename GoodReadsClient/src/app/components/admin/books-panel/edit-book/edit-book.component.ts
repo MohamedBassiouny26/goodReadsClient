@@ -18,7 +18,6 @@ export class EditBookComponent implements OnInit, OnChanges {
     private bookService: BooksService,
     private categoryService: CategoryService,
     private authorSerice: AuthorService
-
   ) { }
 
   ngOnInit(): void {
@@ -30,6 +29,7 @@ export class EditBookComponent implements OnInit, OnChanges {
       .subscribe((res) => (this.authors = res.body));
   }
   ngOnChanges() {
+    console.log(this.updatedBook)
     this.editBookForm = new FormGroup({
       name: new FormControl(this.updatedBook?.name, [Validators.required]),
 
@@ -38,7 +38,7 @@ export class EditBookComponent implements OnInit, OnChanges {
       ]),
       author: new FormControl(this.updatedBook?.author, [Validators.required]),
       photo: new FormControl(this.updatedBook?.cover),
-      sumary: new FormControl(),
+      sumary: new FormControl(this.updatedBook?.sumary),
       cover: new FormControl(this.updatedBook?.cover),
     });
   }

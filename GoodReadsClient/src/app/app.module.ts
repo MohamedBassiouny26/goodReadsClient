@@ -135,11 +135,12 @@ import { AddItemComponent } from './components/admin/category-panel/add-category
 import { RegisterComponent } from './components/register/register.component';
 import { UserComponent } from './components/user/user.component';
 import { CategoriesComponent } from './components/categories/categories.component';
-import { NgxPaginationModule } from 'ngx-pagination';
 import { CategoryComponent } from './components/category/category.component';
 
 import { AuthorsComponent } from './components/authors/authors.component';
 import { AuthorComponent } from './components/author/author.component';
+import { RatingModule } from 'ng-starrating';
+import { BookDetailsComponent } from './components/book-details/book-details.component';
 
 @NgModule({
   declarations: [
@@ -166,9 +167,10 @@ import { AuthorComponent } from './components/author/author.component';
     RegisterComponent,
     UserComponent,
     CategoriesComponent,
-    CategoryComponent
+    CategoryComponent,
     AuthorsComponent,
-    AuthorComponent
+    AuthorComponent,
+    BookDetailsComponent
 
   ],
   imports: [
@@ -179,7 +181,8 @@ import { AuthorComponent } from './components/author/author.component';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    RatingModule
   ],
   providers: [NoopAnimationsModule],
   bootstrap: [AppComponent]
