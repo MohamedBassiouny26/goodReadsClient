@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BooksComponent } from './components/books/books.component';
 // import { AuthorsComponent } from './components/authors/authors.component';
 // import { CategoriesComponent } from './components/categories/categories.component';
-// import { HomeComponent } from './components/home/home.component';
+import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 // import { NotFoundComponent } from './components/not-found/not-found.component';
 import { UserComponent } from './components/user/user.component';
@@ -44,7 +44,7 @@ const routes: Routes = [
       // { path: 'user', component: UsersComponent },
       // { path: 'books', component: BooksComponent },
       { path: 'categories', component: CategoriesComponent },
-      // { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+      { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
       //{ path: '', redirectTo: 'authors', pathMatch: 'full' },
       // { path: 'authors', component: AuthorsComponent },
       { path: 'register', component: RegisterComponent },
