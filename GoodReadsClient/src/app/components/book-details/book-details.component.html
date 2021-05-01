@@ -1,4 +1,4 @@
-<div class="container " #outlet #content>
+<div class="container ">
   <div class="row">
     <div class="col-md-4 col-lg-3 ">
       <img class="rounded mx-auto d-block rounded cover shadow p-3 mb-5 " src="{{books.cover}}" alt="">
@@ -36,13 +36,10 @@
   </div>
 
   <form action="" [formGroup]="ReviewForm" (ngSubmit)="onSubmit()" style="display: flex;;">
-
     <textarea formControlName="review" class="form-control" aria-label="With textarea" #review
       placeholder="Enter Your Review ..." required></textarea>
-
     <button type="submit" class="btn btn-danger" (click)='addReview(review.value)' [disabled]="ReviewForm.invalid">Add
       Review</button>
-
   </form>
   <br />
 </div>
