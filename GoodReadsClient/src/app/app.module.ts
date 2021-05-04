@@ -136,17 +136,20 @@ import { RegisterComponent } from './components/register/register.component';
 import { UserComponent } from './components/user/user.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { CategoryComponent } from './components/category/category.component';
-
+import {HomeComponent}from './components/home/home.component';
 import { AuthorsComponent } from './components/authors/authors.component';
 import { AuthorComponent } from './components/author/author.component';
 import { RatingModule } from 'ng-starrating';
 import { BookDetailsComponent } from './components/book-details/book-details.component';
+import { from } from 'rxjs';
+
 
 @NgModule({
   declarations: [
     HeaderComponent,
     TestComponent,
     AppComponent,
+    HomeComponent,
     BooksComponent,
     LoginComponent,
     AdminComponent,
@@ -182,7 +185,7 @@ import { BookDetailsComponent } from './components/book-details/book-details.com
     ReactiveFormsModule,
     FormsModule,
     NgxPaginationModule,
-    RatingModule
+    RatingModule,
   ],
   providers: [NoopAnimationsModule],
   bootstrap: [AppComponent]
