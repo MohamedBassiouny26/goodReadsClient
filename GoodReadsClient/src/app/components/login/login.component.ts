@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
         res => {
           localStorage.setItem('token', res.token)
           localStorage.setItem('id', res.userId)
-          this.router.navigate(['/books'])
+          this.router.navigate(['/home'])
 
           console.log(res);
 
@@ -61,6 +61,5 @@ export class LoginComponent implements OnInit {
   showIcon(value: boolean) {
     this.logoutIcon.emit(value);
     console.log('trueeeeeee');
-
   }
 }

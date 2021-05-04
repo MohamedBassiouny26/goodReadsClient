@@ -1,3 +1,4 @@
+import { HomeService } from 'src/app/services/home.service';
 import { Component, Input, OnInit,OnDestroy } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { HomeService } from 'src/app/services/home.service';
@@ -11,6 +12,19 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
+// <<<<<<< routing
+//   styleUrls: ['./home.component.css']
+// })
+// export class HomeComponent implements OnInit {
+
+//   constructor(private home:HomeService) { }
+
+//   ngOnInit(): void {
+
+//     this.home.changeMessage(true)
+//   }
+
+// =======
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit,OnDestroy {
