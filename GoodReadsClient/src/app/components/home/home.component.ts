@@ -1,5 +1,4 @@
-import { HomeService } from 'src/app/services/home.service';
-import { Component, Input, OnInit,OnDestroy } from '@angular/core';
+import { Component, Input, OnInit, OnDestroy } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { HomeService } from 'src/app/services/home.service';
 import { PaginationService } from 'src/app/services/pagination.service';
@@ -12,22 +11,22 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-// <<<<<<< routing
-//   styleUrls: ['./home.component.css']
-// })
-// export class HomeComponent implements OnInit {
+  // <<<<<<< routing
+  //   styleUrls: ['./home.component.css']
+  // })
+  // export class HomeComponent implements OnInit {
 
-//   constructor(private home:HomeService) { }
+  //   constructor(private home:HomeService) { }
 
-//   ngOnInit(): void {
+  //   ngOnInit(): void {
 
-//     this.home.changeMessage(true)
-//   }
+  //     this.home.changeMessage(true)
+  //   }
 
-// =======
+  // =======
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent implements OnInit,OnDestroy {
+export class HomeComponent implements OnInit, OnDestroy {
   data: Array<any> = [];
   totalRecords: string = '';
   page: number = 1;
@@ -47,7 +46,7 @@ export class HomeComponent implements OnInit,OnDestroy {
     status: ''
   }
 
-  message !:boolean;
+  message !: boolean;
   subscription !: Subscription;
 
   constructor(
@@ -66,7 +65,7 @@ export class HomeComponent implements OnInit,OnDestroy {
     this.subscription = this.home.currentMessage.subscribe(message => this.message = message)
     this.home.changeMessage(true)
     console.log(this.message);
-    
+
     this.userId = this.auth.getId();
     this.home.getAllBooks(this.userId).subscribe(
       (res) => {

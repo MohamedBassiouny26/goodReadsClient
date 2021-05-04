@@ -9,17 +9,17 @@ h2 {
   /* font-family: "Lucida Console", "Courier New", monospace; */
 }
 .header {
-  height: 200px;
+  height: 250px;
 }
 .headerText {
   /* color: #3fa3e4; */
   position: absolute;
-  top: 15%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  width: 40%;
-  padding: 20px;
+  /* width: 40%; */
+  padding: 5%;
   text-align: center;
 }
 /* .cont {

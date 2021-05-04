@@ -1,0 +1,30 @@
+<div class="container ">
+  <div class="row">
+    <div class="col-md-4 col-lg-3 ">
+      <img class="rounded mx-auto d-block rounded cover shadow p-3 mb-5 " src="{{author.photo}}" alt="">
+    </div>
+    <div class="col-md-8 col-lg-9">
+      <h1 class="fw-bold text-center">{{author.fname}} {{author.lname}}</h1>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+        a
+        type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.
+      </p>
+    </div>
+  </div>
+  <div class="related-books row d-flex  align-items-center">
+    <h3 class="text ">{{author.fname}} {{author.lname}} Books</h3>
+    <hr class="text">
+    <a class="bookCover col-lg-2 col-sm-12 col-md-6" *ngFor="let book of author.books | slice:0:6;"
+      [routerLink]='["/books",book._id]'>
+      <img src="{{book.cover}}" class="bookCoverImg" alt="...">
+      <div class="">
+        <h5 class="text">{{book.name}}</h5>
+      </div>
+    </a>
+  </div>
+</div>

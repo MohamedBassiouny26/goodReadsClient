@@ -1,0 +1,53 @@
+.cover {
+  height: 20rem;
+  width: 100%;
+}
+.par {
+  padding: 5px;
+  box-shadow: 2px 5px grey;
+  background-color: white;
+  margin-top: 1px;
+  margin-bottom: 24px;
+  border: 0.5px;
+}
+.pra {
+  padding: 5px;
+
+  text-shadow: black;
+  font-weight: bolder;
+  color: darkslategray;
+}
+.rev {
+  margin-left: 3px;
+}
+.container {
+  margin-top: 100px;
+}
+.related-books {
+  /* background-color: #1a1e21; */
+  padding: 5px;
+  margin: auto;
+  text-align: left;
+  border-radius: 20px;
+  margin: 2rem auto;
+  overflow: hidden;
+}
+.text {
+  color: black;
+}
+.bookCover {
+  cursor: pointer;
+  max-width: 100%;
+  height: auto;
+  margin: 0px;
+  text-align: center;
+  text-decoration: none;
+}
+.bookCover:hover {
+  transform: scale(1.05);
+  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06); */
+}
+.bookCoverImg {
+  width: 130px;
+  height: auto;
+}

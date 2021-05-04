@@ -4,7 +4,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { BooksComponent } from './components/books/books.component';
 // import { AuthorsComponent } from './components/authors/authors.component';
 // import { CategoriesComponent } from './components/categories/categories.component';
-import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 // import { NotFoundComponent } from './components/not-found/not-found.component';
 import { UserComponent } from './components/user/user.component';
@@ -25,6 +24,7 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { AuthorsComponent } from './components/authors/authors.component';
 import { HomeComponent } from './components/home/home.component';
 import { BookDetailsComponent } from './components/book-details/book-details.component';
+import { AuthorDetailsComponent } from './components/author-details/author-details.component';
 
 const routes: Routes = [
   // { path: '', component: HomeComponent },
@@ -43,30 +43,18 @@ const routes: Routes = [
     component: UserComponent,
     children: [
       { path: '', component: HeaderComponent },
-      { path:'home' , component:HomeComponent},
-      // { path: 'user', component: UsersComponent },
-      // { path: 'books', component: BooksComponent },
+      { path: 'home', component: HomeComponent },
       { path: 'categories', component: CategoriesComponent },
       { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
-      //{ path: '', redirectTo: 'authors', pathMatch: 'full' },
-      // { path: 'authors', component: AuthorsComponent },
       { path: 'register', component: RegisterComponent },
-      // { path: '', component: HomeComponent },
-      // { path: 'user', component: UsersComponent },
       { path: 'books', component: BooksComponent, canActivate: [AuthGuard] },
       { path: 'books/:id', component: BookDetailsComponent },
-      // { path: 'categories', component: CategoriesComponent, canActivate: [AuthGuard] },
-      // { path: 'categories/:id', component: CategoryDetailsComponent },
-      // { path: 'categories/:id/:id', component: BookDetailsComponent },
       { path: 'login', component: LoginComponent },
       { path: '', redirectTo: 'authors', pathMatch: 'full' },
       { path: 'authors', component: AuthorsComponent, canActivate: [AuthGuard] },
-      // { path: 'authors/:id', component: AuthorDetailsComponent },
-      // { path: 'authors/:id/:id', component: BookDetailsComponent },
+      { path: 'authors/:id', component: AuthorDetailsComponent },
 
-      // { path: 'home/:id', component: BookDetailsComponent },
 
-      // { path: ':id', component: BookDetailsComponent },
     ],
   },
   // { path: '**', component: NotFoundComponent }
