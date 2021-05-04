@@ -140,7 +140,9 @@ import {HomeComponent}from './components/home/home.component';
 import { AuthorsComponent } from './components/authors/authors.component';
 import { AuthorComponent } from './components/author/author.component';
 import { RatingModule } from 'ng-starrating';
+import { BookDetailsComponent } from './components/book-details/book-details.component';
 import { from } from 'rxjs';
+
 
 @NgModule({
   declarations: [
@@ -170,7 +172,8 @@ import { from } from 'rxjs';
     CategoriesComponent,
     CategoryComponent,
     AuthorsComponent,
-    AuthorComponent
+    AuthorComponent,
+    BookDetailsComponent
 
   ],
   imports: [
