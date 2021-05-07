@@ -143,6 +143,9 @@ import { RatingModule } from 'ng-starrating';
 import { BookDetailsComponent } from './components/book-details/book-details.component';
 import { from } from 'rxjs';
 import { AuthorDetailsComponent } from './components/author-details/author-details.component';
+import { ShortenPipe } from './shorten.pipe';
+import { HomeService } from './services/home.service';
+import { AuthService } from './services/auth.service';
 
 
 @NgModule({
@@ -176,7 +179,8 @@ import { AuthorDetailsComponent } from './components/author-details/author-detai
     AuthorComponent,
     HomeComponent,
     BookDetailsComponent,
-    AuthorDetailsComponent
+    AuthorDetailsComponent,
+    ShortenPipe
   ],
   imports: [
     BrowserModule,

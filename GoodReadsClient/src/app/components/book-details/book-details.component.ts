@@ -41,7 +41,6 @@ export class BookDetailsComponent implements OnInit, OnDestroy {
     this.subscriber.unsubscribe();
   }
 
-
   books: Book = {
     _id: '',
     name: '',
@@ -70,9 +69,7 @@ export class BookDetailsComponent implements OnInit, OnDestroy {
       }
     }]
   }
-
   subscriber: any
-
   ngOnInit(): void {
     this.subscriber = this.myService.getBookById(this.myActivatedRoute.snapshot.params.id)
       .subscribe((res: any) => {
@@ -98,19 +95,25 @@ export class BookDetailsComponent implements OnInit, OnDestroy {
     // this.ReviewForm.review = this.review?.value
     console.log(this.ReviewForm.get("review")?.valid)
   }
-
-
   addReview(review: string) {
-
     this.myService.addReview(this.userId, { bookId: this.books._id, review }).subscribe(
       res => console.log(res),
+      err => {
+        if (err.status === 403)
+          this.router.navigate(["/login"])
+      }
     );
   }
   changeStatus(e: any) {
     console.log(e.target.value, this.books._id);
     this.bookStatus.bookId = this.books._id
     this.bookStatus.status = e.target.value
-    this.userService.addBook(this.userId, this.bookStatus).subscribe(res => console.log(res));
+    this.userService.addBook(this.userId, this.bookStatus).subscribe(
+      res => console.log(res),
+      err => {
+        if (err.status === 403)
+          this.router.navigate(["/login"])
+      });
   }
   navigate(bookId) {
     console.log(bookId)

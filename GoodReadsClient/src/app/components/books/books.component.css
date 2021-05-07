@@ -60,9 +60,9 @@ a {
 .text {
   color: white;
 }
-.bookHeader {
+/* .bookHeader {
   max-height: 50px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
+} */

@@ -11,19 +11,6 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  // <<<<<<< routing
-  //   styleUrls: ['./home.component.css']
-  // })
-  // export class HomeComponent implements OnInit {
-
-  //   constructor(private home:HomeService) { }
-
-  //   ngOnInit(): void {
-
-  //     this.home.changeMessage(true)
-  //   }
-
-  // =======
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit, OnDestroy {
@@ -61,22 +48,15 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-
     this.subscription = this.home.currentMessage.subscribe(message => this.message = message)
     this.home.changeMessage(true)
-    console.log(this.message);
-
     this.userId = this.auth.getId();
     this.home.getAllBooks(this.userId).subscribe(
       (res) => {
         this.data = res;
         this.currentSection = 'All';
-        // console.log(res);
-        // console.log(this.data);
       },
       (err) => {
-        if (err.status === 403)
-          this.router.navigate(['/login']);
       }
     );
   }

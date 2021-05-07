@@ -16,9 +16,9 @@ export class LoginComponent implements OnInit {
   constructor(private auth: AuthService, private router: Router, private fb: FormBuilder) { }
 
   ngOnInit(): void {
-    // if(this.auth.loggedIn()){
-    //   this.router.navigateByUrl('/home');
-    // }
+    if (this.auth.loggedIn()) {
+      this.router.navigateByUrl('/home');
+    }
   }
 
   get email() { return this.loginForm.get('email'); }
@@ -41,18 +41,14 @@ export class LoginComponent implements OnInit {
     this.auth.loginUser(this.loginUserData)
       .subscribe(
         res => {
-          localStorage.setItem('token', res.token)
-          localStorage.setItem('id', res.userId)
-          this.router.navigate(['/home'])
-
+          localStorage.setItem('token', res.token);
+          localStorage.setItem('id', res.userId);
+          this.router.navigate(['/home']);
           console.log(res);
-
         },
         err => {
           this.forbidden = err.status === 403 ? true : false
         }
-
-
       )
   }
 

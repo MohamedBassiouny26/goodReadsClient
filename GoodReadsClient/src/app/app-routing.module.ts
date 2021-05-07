@@ -42,19 +42,16 @@ const routes: Routes = [
     path: '',
     component: UserComponent,
     children: [
-      { path: '', component: HeaderComponent },
-      { path: 'home', component: HomeComponent },
+      { path: '', redirectTo: '/home', pathMatch: 'full' },
       { path: 'categories', component: CategoriesComponent },
       { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
       { path: 'register', component: RegisterComponent },
-      { path: 'books', component: BooksComponent, canActivate: [AuthGuard] },
+      { path: 'books', component: BooksComponent },
       { path: 'books/:id', component: BookDetailsComponent },
       { path: 'login', component: LoginComponent },
-      { path: '', redirectTo: 'authors', pathMatch: 'full' },
-      { path: 'authors', component: AuthorsComponent, canActivate: [AuthGuard] },
+      { path: 'authors', component: AuthorsComponent, },
       { path: 'authors/:id', component: AuthorDetailsComponent },
-
-
+      { path: 'landing-page', component: HeaderComponent },
     ],
   },
   // { path: '**', component: NotFoundComponent }

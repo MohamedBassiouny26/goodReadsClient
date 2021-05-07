@@ -10,22 +10,19 @@ import { Category } from '../models/user';
 export class CategoryComponent implements OnInit {
 
 
-  constructor() {}
+  constructor() { }
 
-  @Input('categoryInfo') category:Category = {
-    _id:'',
-   name:'',
-   books : [
-     {
-       _id:'',
-      name:'',
-      cover:''
-     }
-   ]
+  @Input('categoryInfo') category: Category = {
+    _id: '',
+    name: '',
+    books: [
+      {
+        _id: '',
+        name: '',
+        cover: ''
+      }
+    ]
   }
-
-
   ngOnInit(): void {
-
   }
 }

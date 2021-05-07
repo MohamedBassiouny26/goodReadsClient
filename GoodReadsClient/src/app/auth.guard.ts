@@ -14,8 +14,7 @@ export class AuthGuard implements CanActivate {
     if (this.auth.loggedIn()) {
       return true
     } else {
-      this.router.navigate([''])
-      alert("sign in first to be able to see our awesome collection of books")
+      this.router.navigate(['/landing-page'])
       return false
     }
   }

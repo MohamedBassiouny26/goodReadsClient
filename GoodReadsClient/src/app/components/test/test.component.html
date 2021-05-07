@@ -1,38 +1,36 @@
-
 <nav class="navbar navbar-expand-lg fixed-top" (scroll)="onWindowScroll($event);">
-  <h1>GoodReads</h1>
+  <h1 style="cursor: pointer;" routerLink='/landing-page'>GoodReads</h1>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-   aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-   <i class="fas fa-bars"></i>
+    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-bars"></i>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <ul class="navbar-nav mx-auto">
       <li class="nav-item">
-        <a [routerLinkActiveOptions]='{exact:true}' routerLinkActive="active" routerLink="home" class="nav-link" data-abc="true" *ngIf="logoutIcon">Home</a>
+        <a [routerLinkActiveOptions]='{exact:true}' routerLinkActive="active" routerLink="home" class="nav-link"
+          data-abc="true" *ngIf="logoutIcon">Library</a>
       </li>
       <li class="nav-item">
-        <a routerLinkActive="active" routerLink="books" class="nav-link"  data-abc="true">Books</a>
+        <a routerLinkActive="active" routerLink="books" class="nav-link" data-abc="true">Books</a>
       </li>
       <li class="nav-item">
-        <a routerLinkActive="active" routerLink="categories" class="nav-link"  data-abc="true">Categories</a>
+        <a routerLinkActive="active" routerLink="categories" class="nav-link" data-abc="true">Categories</a>
       </li>
       <li class="nav-item">
-        <a routerLinkActive="active" routerLink="authors" class="nav-link"  data-abc="true">Authors</a>
+        <a routerLinkActive="active" routerLink="authors" class="nav-link" data-abc="true">Authors</a>
       </li>
-      <div class="input-group input-group-sm mb-3 d-flex" *ngIf="logoutIcon">
-        <input type="text" class="form-control search" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+      <!-- <div class="input-group input-group-sm  d-flex   seachBox" *ngIf="logoutIcon">
+        <input type="text" class="form-control search" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-sm">
         <i class="fas fa-search"></i>
-      </div>
-      
-        <li class="nav-item login">
-          <button type="button" class="btn btn-primary "  (click)="goToLogin()" *ngIf=" ! logoutIcon">Login</button>
-        </li>
-        <li class='nav-item logout' *ngIf="logoutIcon">
-          <button (click)="logOut()"><i class="fas fa-sign-out-alt"></i></button>
-             
-        </li>
-   
+      </div> -->
+
+      <li class="nav-item login">
+        <button type="button" class="btn btn-primary " (click)="goToLogin()" *ngIf=" ! logoutIcon">Login</button>
+      </li>
+      <li class='nav-item logout' *ngIf="logoutIcon">
+        <button (click)="logOut()"><i class="fas fa-sign-out-alt"></i></button>
+      </li>
     </ul>
   </div>
 </nav>
-
