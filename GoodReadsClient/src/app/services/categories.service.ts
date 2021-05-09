@@ -6,8 +6,8 @@ import { Category } from '../components/models/category';
   providedIn: 'root',
 })
 export class CategoryService {
-  constructor(private client: HttpClient) {}
-  readonly baseURL: string = 'http://localhost:8000/categories';
+  constructor(private client: HttpClient) { }
+  readonly baseURL: string = 'http://13.59.136.94:8000/categories';
 
   getCategories() {
     return this.client.get(this.baseURL, { observe: 'response' });

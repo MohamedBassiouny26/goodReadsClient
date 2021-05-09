@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class BooksService {
   constructor(private httpClient: HttpClient) { }
-  readonly baseUrl: string = 'http://localhost:8000/books';
+  readonly baseUrl: string = 'http://13.59.136.94:8000/books';
 
   getBooks() {
     return this.httpClient.get(this.baseUrl);

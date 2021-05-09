@@ -7,7 +7,7 @@ import { AuthService } from './auth.service';
   providedIn: 'root',
 })
 export class HomeService {
-  baseUrl = 'http://localhost:8000/users/';
+  baseUrl = 'http://13.59.136.94:8000/users/';
   header_object = new HttpHeaders().set("authorization", "Bearer " + this.auth.getToken());
   // options = new RequestOptions({ headers: this.header_object });
 

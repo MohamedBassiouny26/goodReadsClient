@@ -9,7 +9,7 @@ export class AuthorService {
   constructor(private client: HttpClient) {
     console.log('service ctor');
   }
-  readonly baseURL: string = 'http://localhost:8000/authors';
+  readonly baseURL: string = 'http://13.59.136.94:8000/authors';
   //readonly userBooks: string = "http://localhost:8000/users/606623d776e86ac9ad8902fd/books";
 
   getAuthors() {

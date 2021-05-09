@@ -13,11 +13,11 @@ export class UsersService {
     console.log('service ctor')
   }
 
-  readonly baseURL: string = "http://localhost:8000/users";
-  readonly userBooks: string = "http://localhost:8000/users/606623d776e86ac9ad8902fd/books";
-  readonly catURL: string = "http://localhost:8000/categories";
-  readonly authURL: string = "http://localhost:8000/authors";
-  readonly bookURL: string = "http://localhost:8000/books";
+  readonly baseURL: string = "http://13.59.136.94:8000/users";
+  readonly userBooks: string = "http://13.59.136.94:8000/users/606623d776e86ac9ad8902fd/books";
+  readonly catURL: string = "http://13.59.136.94:8000/categories";
+  readonly authURL: string = "http://13.59.136.94:8000/authors";
+  readonly bookURL: string = "http://13.59.136.94:8000/books";
 
   getUsers() {
     return this.client.get(this.baseURL, { observe: 'response' })

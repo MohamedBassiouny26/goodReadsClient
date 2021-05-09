@@ -7,7 +7,7 @@ import { UsersService } from './users.service';
 })
 export class RatingAndStatusService {
 
-  private loginUrl = "http://localhost:8000/login ";
+  private loginUrl = "http://13.59.136.94:8000/login ";
   constructor(private http: HttpClient, private usersService: UsersService) { }
 
   changeRating(newRate: any) {
