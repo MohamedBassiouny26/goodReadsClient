@@ -16,23 +16,18 @@ export class HomeService {
     return this.auth.getToken()
   }
   getAllBooks(userId: string): Observable<any> {
-    const header_object = new HttpHeaders().set("authorization", "Bearer " + this.getToken());
-    return this.http.get<any>(`${this.baseUrl}/${userId}/books`, { headers: header_object });
+    return this.http.get<any>(`${this.baseUrl}/${userId}/books`,);
   }
   getCurrentlyReading(userId: string): Observable<any> {
-    const header_object = new HttpHeaders().set("authorization", "Bearer " + this.getToken());
-    return this.http.get<any>(`${this.baseUrl}/${userId}/currently-reading`, { headers: header_object });
+    return this.http.get<any>(`${this.baseUrl}/${userId}/currently-reading`);
   }
   getWantToRead(userId: string): Observable<any> {
-    const header_object = new HttpHeaders().set("authorization", "Bearer " + this.getToken());
-    return this.http.get<any>(`${this.baseUrl}/${userId}/want-to-read`, { headers: header_object });
+    return this.http.get<any>(`${this.baseUrl}/${userId}/want-to-read`);
   }
 
   getRead(userId: string): Observable<any> {
-    const header_object = new HttpHeaders().set("authorization", "Bearer " + this.getToken());
-    return this.http.get<any>(`${this.baseUrl}/${userId}/read`, { headers: header_object });
+    return this.http.get<any>(`${this.baseUrl}/${userId}/read`);
   }
-
   private messageSource = new BehaviorSubject(false);
   currentMessage = this.messageSource.asObservable();
 

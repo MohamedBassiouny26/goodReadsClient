@@ -3,7 +3,6 @@ import { AuthService } from 'src/app/services/auth.service';
 import { HomeService } from 'src/app/services/home.service';
 import { PaginationService } from 'src/app/services/pagination.service';
 import { StarRatingComponent } from 'ng-starrating';
-import { RatingAndStatusService } from 'src/app/services/rating-and-status.service';
 import { Router } from '@angular/router';
 import { UsersService } from 'src/app/services/users.service';
 import { Subscription } from 'rxjs';
@@ -40,7 +39,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     private paginate: PaginationService,
     private auth: AuthService,
     private home: HomeService,
-    private ratingandstatus: RatingAndStatusService,
     private router: Router,
     private userService: UsersService
   ) {

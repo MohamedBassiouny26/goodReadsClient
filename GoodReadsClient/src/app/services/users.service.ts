@@ -10,7 +10,6 @@ export class UsersService {
   header_object = new HttpHeaders().set("authorization", "Bearer " + this.auth.getToken());
 
   constructor(private client: HttpClient, private auth: AuthService) {
-    console.log('service ctor')
   }
 
   readonly baseURL: string = "http://13.59.136.94:8000/users";
